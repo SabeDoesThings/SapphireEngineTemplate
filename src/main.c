@@ -1,16 +1,15 @@
 #include <SapphireEngine/engine.h>
 
-void start(Game* game) {}
+void start() {}
 
-void update(Game* game, float dt) {}
+void update(float dt) {}
 
-void render(Game* game) {}
+void render() {}
 
 int main(int argc, char* argv[]) {
-	Game game = { 0 };
-	game.start = start;
-	game.update = update;
-	game.render = render;
+	ctx.start = start;
+	ctx.update = update;
+	ctx.render = render;
 
-	run(&game);
+	run("Sapphire Engine 1.0", 1280, 720);
 }
